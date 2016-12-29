@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Quản lý hộ tịch</title>
+<head th:replace="layout::site-head">
+<title>Xin chào đến với chương trình Quản lý Tư pháp</title>
 </head>
-
 <body>
+<header th:replace="layout::site-header"/>
 <h1>Welcome to Spring MVC</h1>
-    Now is: <b th:text="${execInfo.now.time}"></b>
+Now is: <b th:text="${execInfo.now.time}">date and time</b>
+<footer th:replace="layout::site-footer" />
 </body>
-
 </html>
