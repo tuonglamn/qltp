@@ -30,7 +30,7 @@ repositories {
 }
 
 clientDependencies {
-	installDir = 'src/main/resources/bower/'
+	installDir = 'src/assets/vendor'
 	cacheDir = 'build/client-cache/'
 	fileExtensions = ['css', 'js', 'eot', 'svg', 'ttf', 'woff', 'woff2', 'ts',
                       'jpg', 'jpeg', 'png', 'gif'] // <1>
