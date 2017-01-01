@@ -30,7 +30,7 @@ repositories {
 }
 
 clientDependencies {
-	installDir = 'src/assets/vendor'
+	installDir = 'src/main/resources/static/bower'
 	cacheDir = 'build/client-cache/'
 	fileExtensions = ['css', 'js', 'eot', 'svg', 'ttf', 'woff', 'woff2', 'ts',
                       'jpg', 'jpeg', 'png', 'gif']
@@ -41,11 +41,11 @@ clientDependencies {
                         'gulpfile.js', 'source/**']
     bower {
         'jquery'('2.0.0')
-        'bootstrap'('3.3.6')
+        'bootstrap'('3.3.6', exclude: 'jquery')
     }
     
     yarn {
-        'angular'('1.6.1')
+        'angular'('1.5.8')
     }
 }
 
