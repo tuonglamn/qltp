@@ -41,13 +41,6 @@ clientDependencies {
                         'gulpfile.js', 'source/**']
     bower {
         'jquery'('2.0.0')
-        'bootstrap'('3.3.6', exclude: 'jquery')
-        'restangular'('1.5.0', transitive: false)
-        'angular-animate'('1.5.0', into: 'angular/modules')
-    }
-    
-    yarn {
-        'angular'('1.5.8')
     }
 }
 
