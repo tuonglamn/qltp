@@ -5,7 +5,7 @@ package com.lam.qltp.services;
 
 import java.util.List;
 
-import com.lam.qltp.models.Post;
+import com.lam.qltp.models.PostModel;
 
 /**
  * @author LamNguyen
@@ -13,15 +13,15 @@ import com.lam.qltp.models.Post;
  */
 public interface PostService {
 
-	List<Post> findAll();
+	List<PostModel> findAll();
 	
-    List<Post> findLatest5();
+    List<PostModel> findLatest5();
     
-    Post findById(Long id);
+    PostModel findById(Long id);
     
-    Post create(Post post);
+    PostModel create(PostModel post);
     
-    Post edit(Post post);
+    PostModel edit(PostModel post);
     
     void deleteById(Long id);
 	

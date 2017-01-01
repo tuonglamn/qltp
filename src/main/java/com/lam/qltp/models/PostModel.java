@@ -9,16 +9,16 @@ import java.util.Date;
  * @author NguyenLam
  *
  */
-public class Post {
+public class PostModel {
 
 	private Long id;
-	
+
 	private String title;
-	
+
 	private String body;
-	
-	private User author;
-	
+
+	private UserModel author;
+
 	private Date date = new Date();
 
 	public Long getId() {
@@ -45,11 +45,11 @@ public class Post {
 		this.body = body;
 	}
 
-	public User getAuthor() {
+	public UserModel getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(User author) {
+	public void setAuthor(UserModel author) {
 		this.author = author;
 	}
 
@@ -60,13 +60,13 @@ public class Post {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	public Post(Long id, String title, String body, User author){
-		
+
+	public PostModel(Long id, String title, String body, UserModel author) {
+
 	}
-	
+
 	@Override
-	public String toString(){
+	public String toString() {
 		return "Post{" + "id=" + id + ", title='" + title + "', author='" + author + "'}";
 	}
 }

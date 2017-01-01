@@ -10,7 +10,7 @@ import java.util.Set;
  * @author LamNguyen
  *
  */
-public class User {
+public class UserModel {
 	
 	private Long id;
 	
@@ -20,7 +20,7 @@ public class User {
 	
 	private String fullName;
 	
-	private Set<Post> posts = new HashSet<>();
+	private Set<PostModel> posts = new HashSet<>();
 
 	public Long getId() {
 		return id;
@@ -54,15 +54,15 @@ public class User {
 		this.fullName = fullName;
 	}
 
-	public Set<Post> getPosts() {
+	public Set<PostModel> getPosts() {
 		return posts;
 	}
 
-	public void setPosts(Set<Post> posts) {
+	public void setPosts(Set<PostModel> posts) {
 		this.posts = posts;
 	}
 	
-	public User(Long id, String username, String fullName) { 
+	public UserModel(Long id, String username, String fullName) { 
         this.id = id; this.username = username; this.fullName = fullName;
    }
 
