@@ -40,7 +40,14 @@ clientDependencies {
 					    '**/*.min.js', '**/*.min.css', '**/*.map', '**/Gruntfile.js',
                         'gulpfile.js', 'source/**']
     bower {
-        'jquery'('2.0.0')
+        'jquery'('3.1.1')
+        'angular'('1.6.1')
+        'bootstrap'('3.3.6', exclude: 'jquery')
+        'restangular'('1.5.0', transitive: false)
+        'angular-animate'('1.5.0', into: 'angular/modules')
+        'angular-bootstrap'('2.3.2') {
+            include 'ui-bootstrap-tpls.js'
+        }
     }
 }
 
