@@ -33,21 +33,30 @@ clientDependencies {
 	installDir = 'src/assets/vendor'
 	cacheDir = 'build/client-cache/'
 	fileExtensions = ['css', 'js', 'eot', 'svg', 'ttf', 'woff', 'woff2', 'ts',
-                      'jpg', 'jpeg', 'png', 'gif'] // <1>
-    releaseFolders = ['dist', 'release'] // <2>
-    copyIncludes = [] // <3>
+                      'jpg', 'jpeg', 'png', 'gif']
+    releaseFolders = ['dist', 'release']
+    copyIncludes = []
     copyExcludes = ['build/**','speed/**','src/**', 'test/**',
 					    '**/*.min.js', '**/*.min.css', '**/*.map', '**/Gruntfile.js',
-                        'gulpfile.js', 'source/**'] // <4>
+                        'gulpfile.js', 'source/**']
     bower {
         'jquery'('2.0.0')
         'bootstrap'('3.3.6')
+    }
+    
+    yarn {
+        'angular'('1.6.1')
     }
 }
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-devtools')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('com.zaxxer:HikariCP')
+	compile('org.apache.commons:commons-lang3:3.5')
+	compile('mysql:mysql-connector-java:5.1.6')
+	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
 	runtime 'net.sourceforge.nekohtml:nekohtml:1.9.15'
