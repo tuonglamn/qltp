@@ -53,9 +53,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-devtools')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('com.zaxxer:HikariCP')
-	compile('org.apache.commons:commons-lang3:3.5')
-	compile('mysql:mysql-connector-java:5.1.6')
+	compile('org.springframework.data:spring-data-jpa')
+	compile('mysql:mysql-connector-java:6.0.3')
 	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
