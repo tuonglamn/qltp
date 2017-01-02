@@ -13,6 +13,7 @@
 .recommenders
 bin
 build
+gradle
 lib/
 target
 .factorypath
