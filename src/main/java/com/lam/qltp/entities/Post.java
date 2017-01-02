@@ -80,11 +80,12 @@ public class Post {
 
      public Post() {}
 
-     public Post(Long id, String title, String body, User author) {
+     public Post(Long id, String title, String body, User author, Date date) {
           this.id = id;
           this.title = title;
           this.body = body;
           this.author = author;
+          this.date = date;
     }
 
      @Override

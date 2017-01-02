@@ -3,9 +3,6 @@
  */
 package com.lam.qltp.models;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * @author LamNguyen
  *
@@ -15,13 +12,9 @@ public class UserModel {
 	private Long id;
 	
 	private String username;
-	
-	private String passwordHash;
-	
+		
 	private String fullName;
 	
-	private Set<PostModel> posts = new HashSet<>();
-
 	public Long getId() {
 		return id;
 	}
@@ -38,14 +31,6 @@ public class UserModel {
 		this.username = username;
 	}
 
-	public String getPasswordHash() {
-		return passwordHash;
-	}
-
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
-	}
-
 	public String getFullName() {
 		return fullName;
 	}
@@ -54,12 +39,8 @@ public class UserModel {
 		this.fullName = fullName;
 	}
 
-	public Set<PostModel> getPosts() {
-		return posts;
-	}
-
-	public void setPosts(Set<PostModel> posts) {
-		this.posts = posts;
+	public UserModel(){
+		
 	}
 	
 	public UserModel(Long id, String username, String fullName) { 
@@ -69,7 +50,6 @@ public class UserModel {
    @Override
    public String toString() {
        return "User{" + "id=" + id + ", username='" + username + '\'' +
-           ", passwordHash='" + passwordHash + '\'' +
            ", fullName='" + fullName + '\'' + '}';
    }
 

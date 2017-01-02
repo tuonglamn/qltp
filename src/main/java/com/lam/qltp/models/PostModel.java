@@ -3,7 +3,11 @@
  */
 package com.lam.qltp.models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import com.lam.qltp.entities.Post;
 
 /**
  * @author NguyenLam
@@ -17,7 +21,7 @@ public class PostModel {
 
 	private String body;
 
-	private UserModel author;
+	private Long author;
 
 	private Date date = new Date();
 
@@ -45,11 +49,11 @@ public class PostModel {
 		this.body = body;
 	}
 
-	public UserModel getAuthor() {
+	public Long getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(UserModel author) {
+	public void setAuthor(Long author) {
 		this.author = author;
 	}
 
@@ -60,9 +64,29 @@ public class PostModel {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	
+	public PostModel(){
+		
+	}
 
 	public PostModel(Long id, String title, String body, UserModel author) {
 
+	}
+	
+	public static PostModel fromEntity(Post post){
+		PostModel result = new PostModel();
+		result.id = post.getId();
+		result.title = post.getTitle();
+		result.body = post.getBody();
+		return result;
+	}
+	
+	public static List<PostModel> fromEntities(List<Post> posts){
+		List<PostModel> results = new ArrayList<PostModel>();
+		for(Post post: posts){
+			results.add(fromEntity(post));
+		}
+		return results;
 	}
 
 	@Override
