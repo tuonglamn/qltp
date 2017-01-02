@@ -1,4 +1,5 @@
 .gradle
+[Bb]in/
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
