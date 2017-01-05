@@ -36,9 +36,9 @@ webResource {
 	}
     bower {
         dependencies {
-            install name: 'jquery', version: 'latest', filter: ['dist/*.min.*']
+            install name: 'jquery', version: 'latest', filter: ['dist/*.js']
             install name: 'components-font-awesome', version: '4.3.0', outputName: 'font-awesome'
-            install name: 'bootstrap', version: 'latest', filter: ['dist/css/*.min.css', 'dist/js/*.min.js', 'dist/fonts/*']
+            install name: 'bootstrap', version: 'latest', filter: ['dist/css/*.css', 'dist/js/*.js', 'dist/fonts/*']
             install name: 'angular', version: 'latest', filter: ['*.js']
             install name: 'requirejs', version: 'latest', filter: ['*.js']
             install name: 'requirejs-domready', version: 'latest', filter: ['*.js']
