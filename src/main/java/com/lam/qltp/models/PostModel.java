@@ -74,11 +74,15 @@ public class PostModel {
 	}
 	
 	public static PostModel fromEntity(Post post){
-		PostModel result = new PostModel();
-		result.id = post.getId();
-		result.title = post.getTitle();
-		result.body = post.getBody();
-		return result;
+		if (post == null){
+			return null;
+		} else {
+			PostModel result = new PostModel();
+			result.id = post.getId();
+			result.title = post.getTitle();
+			result.body = post.getBody();
+			return result;
+		}
 	}
 	
 	public static List<PostModel> fromEntities(List<Post> posts){

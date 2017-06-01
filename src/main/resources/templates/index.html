@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout::site-head">
-	<title>Chương trình QLTP</title>
+	<title>Chương trình quản lý tư pháp</title>
 </head>
 <body>
 	<header th:replace="layout::site-header"/>
@@ -13,7 +13,9 @@
 	
 	<main id="posts">
 	    <article th:each="p : ${latest3posts}">
-	      <h2 class="title" th:text="${p.title}">Post Title</h2>
+	      <h2 class="title">
+	      	<a href="#" th:text="${p.title}" th:href="@{/posts/view/{id}/(id=${p.id})}"/>
+	      </h2>
 	      <div class="date">
 	        <i>Posted on</i>
 	        <span th:text="${#dates.format(p.date, 'dd-MMM-yyyy')}">22-May-2016</span>

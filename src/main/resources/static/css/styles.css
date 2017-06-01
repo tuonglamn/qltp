@@ -29,6 +29,18 @@ body>aside a {
   text-decoration: none;
 }
 
+body>aside a:hover {
+  text-decoration: underline;
+}
+
+body>main#posts>article>h2.title>a{
+  text-decoration: none;
+}
+
+body>main#posts>article>h2.title>a:hover{
+  text-decoration: underline;
+}
+
 body>main:after {
   content: '';
   display: block;

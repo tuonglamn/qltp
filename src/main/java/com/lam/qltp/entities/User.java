@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.lam.qltp.models.UserModel;
+
 /**
  * @author LamNguyen
  *
@@ -71,6 +73,11 @@ public class User {
 
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
+	}
+	
+	public void setUserModel(UserModel model) {
+		this.username = model.getUsername();
+		this.fullName = model.getFullName();
 	}
 	
 	@Override

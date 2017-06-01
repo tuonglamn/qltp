@@ -3,6 +3,11 @@
  */
 package com.lam.qltp.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.lam.qltp.entities.User;
+
 /**
  * @author LamNguyen
  *
@@ -45,12 +50,34 @@ public class UserModel {
 	
 	public UserModel(Long id, String username, String fullName) { 
         this.id = id; this.username = username; this.fullName = fullName;
-   }
+    }
 
-   @Override
-   public String toString() {
-       return "User{" + "id=" + id + ", username='" + username + '\'' +
-           ", fullName='" + fullName + '\'' + '}';
-   }
+	public static UserModel fromEntity(User user){
+		if (user == null){
+			return null;
+		} else {
+			UserModel result = new UserModel();
+			result.id = user.getId();
+			result.username = user.getUsername();
+			result.fullName = user.getFullName();
+			return result;
+		}
+	}
+	
+	public static List<UserModel> fromEntities(List<User> users){
+		List<UserModel> results = new ArrayList<UserModel>();
+		if (!users.isEmpty()){
+			for(User user: users){
+				results.add(fromEntity(user));
+			}
+		}
+		return results;
+	}
+	
+	@Override
+	public String toString() {
+		return "User{" + "id=" + id + ", username='" + username + '\'' +
+				", fullName='" + fullName + '\'' + '}';
+	}
 
 }
